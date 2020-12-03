@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-    class Program
+    interface IFactoryDesign
     {
-        static void Main(string[] args)
-        {
-            MarketingFirm firm = new MarketingFirm(new SweepstakesStackManager());
-
-        }
+        ISweepstakesManager ManagerStyle();
     }
 }

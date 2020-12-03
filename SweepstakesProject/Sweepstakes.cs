@@ -6,25 +6,16 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         //member variables
         public Dictionary<double, Contestant> contestants;
         public string name;
         //constructor
-        public Sweepstakes(string name)            //I'm not sure what this one is supposed to do. Is this just supposed to be the name of the actual Sweepstakes or retrieve a contestant from the Dictionary?
-        {                                          //Either change the name so not a constructor OR delete scope and add name of Sweepstakes
-                                                   //I deleted return type 'Contestant' and instantiated a new Dictionary because every sweepstakes will have a name and a Dictionary
+        public Sweepstakes(string name)            
+        {                                          
             contestants = new Dictionary<double, Contestant>();
             this.name = name;
-            //foreach(KeyValuePair<double,Contestant> person in contestants)
-            //{
-            //    if(person.Value.lastName == name)
-            //    {
-            //        return person.Value;
-            //    }
-            //}
-            //return null;
         }
 
         //member methods
@@ -46,7 +37,7 @@ namespace SweepstakesProject
                     }
                     else
                     {
-                        System.Threading.Thread.Sleep(250); //Allows new seed for regNumber
+                        //System.Threading.Thread.Sleep(250); //Allows new seed for regNumber //Not needed because not using multiple objects
                         regNumber = rand.Next(1, 1000);
                     }
                 }

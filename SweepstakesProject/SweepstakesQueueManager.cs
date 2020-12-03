@@ -8,7 +8,7 @@ namespace SweepstakesProject
 {
     class SweepstakesQueueManager : ISweepstakesManager
     {
-        Queue<Sweepstakes> queue = new Queue<Sweepstakes>();
+        Queue<Sweepstakes> queue = new Queue<Sweepstakes>(); //perhaps I should instantiate the queue in an instructor but not sure yet
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
             queue.Enqueue(sweepstakes);
