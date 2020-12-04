@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-    class MarketingFirm
+    public class MarketingFirm
     {
         private ISweepstakesManager _manager;
         public ISweepstakesManager Manager { get => _manager; set => _manager = value; }

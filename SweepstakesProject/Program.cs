@@ -10,7 +10,9 @@ namespace SweepstakesProject
     {
         static void Main(string[] args)
         {
-            MarketingFirm firm = new MarketingFirm(new SweepstakesStackManager());
+            Simulation newSim = new Simulation();
+            newSim.CreateMarketingFirmWithManager();
+            Console.ReadLine();
 
         }
     }

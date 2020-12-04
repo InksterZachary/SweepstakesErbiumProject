@@ -8,6 +8,6 @@ namespace SweepstakesProject
 {
     interface IFactoryDesign
     {
-        ISweepstakesManager ManagerStyle();
+        ISweepstakesManager ManagerStyleChoice();
     }
 }
