@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MailKit;
+using MimeKit;
 
 namespace SweepstakesProject
 {
@@ -10,6 +12,7 @@ namespace SweepstakesProject
     {
         //member variables
         public Dictionary<double, Contestant> contestants;
+        
         public string name;
         //constructor
         public Sweepstakes(string name)
@@ -19,6 +22,7 @@ namespace SweepstakesProject
         }
 
         //member methods
+
         public void RegisterContestant(Contestant contestant)
         {
             contestants.Add(contestant.registrationNumber, contestant);
@@ -51,7 +55,7 @@ namespace SweepstakesProject
         }
         public void CongratulateWinner() //The idea is that when calling PickWinner we will have already assigned it it's value. Does this keep calling for a new winner?
         {
-            foreach(KeyValuePair<Double,Contestant> players in contestants)
+            foreach (KeyValuePair<Double,Contestant> players in contestants)
             {
                 if(players.Key != PickWinner().registrationNumber)
                 {
@@ -59,8 +63,8 @@ namespace SweepstakesProject
                 }
                 else
                 {
-                    Console.WriteLine("Congratulations "+PickWinner().firstName+PickWinner().lastName+"\n" +
-                        "An email has been delivered to: "+PickWinner().email+"\n" +
+                    Console.WriteLine("Congratulations " + PickWinner().firstName + PickWinner().lastName + "\n" +
+                        "An email has been delivered to: " + PickWinner().email + "\n" +
                         "Please contact our offices as soon as you recieve your confirmation email, thank you!");
                 }
             }
