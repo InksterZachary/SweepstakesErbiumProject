@@ -13,7 +13,6 @@ namespace SweepstakesProject
             Simulation newSim = new Simulation();
             newSim.CreateMarketingFirmWithManager();
             Console.ReadLine();
-
         }
     }
 }
